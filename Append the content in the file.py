@@ -1,0 +1,11 @@
+print("How many lines you want to write")
+n=int(input())
+outfile=open("one.txt","at")
+for i in range(n):
+    outfile.write(input("Enter the line"))
+outfile.close()
+print("File Written Successfully")
+infile=open("one.txt","rt")
+line=infile.read()
+print(line)
+infile.close()
