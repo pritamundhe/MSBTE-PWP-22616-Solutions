@@ -1,2 +1,4 @@
-Hello, World!
-Python is Easy!
+
+Hello world!
+Python is easy!
+Hello Pritam!

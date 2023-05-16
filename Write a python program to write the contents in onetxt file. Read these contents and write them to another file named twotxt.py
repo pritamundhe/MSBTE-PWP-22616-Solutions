@@ -1,15 +1,21 @@
+print("how many lines you want to write : ")
+n=int(input())
+outfile=open("one.txt","wt")
+for i in range(n):
+    print("Enter the line..")
+    line=input()
+    outfile.write("\n"+line)
+outfile.close()
 
-n=int(input("How many lines you want to write: "))
+infile=open("one.txt","rt")
+outfile=open("two.txt","wt")
+i=0
+for i in range(n+1):
+    line=infile.readline()
+    outfile.write("\n"+line)
+infile.close()
+outfile.close()
 
-with open("one.txt","w") as outfile:
-    for i in range(n):
-        line=input("Enter the line :")
-        outfile.write(line+"\n")
-
-with open("one.txt","r") as infile, open("two.txt","w") as outfile:
-    for linr in infile:
-        outfile.write(line)
-
-print("The contents of files are...")
-with open("two.txt","r") as infile:
-    print(infile.read())
+infile=open("two.txt","rt")
+print(infile.read())
+infile.close()
