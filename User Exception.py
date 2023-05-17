@@ -1,11 +1,19 @@
-class Error (Exception):
-    print("Value cant be 0.")
+class Employee:
+    def __init__(self):
+        self.id = ""
+        self.name = ""
 
-number=0
-try:
-    if number == 0:
-        raise Error
-    else:
-        print("Value is more than 0.")
-except Error:
-    pass
+    def read_employee_info(self):
+        self.id = input("Enter employee id: ")
+        self.name = input("Enter name: ")
+       
+    def print_employee_info(self):
+        print("Employee Information:")
+        print("id:", self.id)
+        print("name:", self.name)
+       
+
+employee = Employee()
+
+employee.read_employee_info()
+employee.print_employee_info()
